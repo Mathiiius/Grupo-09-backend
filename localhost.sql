@@ -20,8 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `movies_db`
 --
-CREATE DATABASE IF NOT EXISTS `movies_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
-USE `movies_db`;
+CREATE DATABASE IF NOT EXISTS `matias123_movies_db` DEFAULT CHARACTER SET utf8mb4;
+USE `matias123_movies_db`;
 
 -- --------------------------------------------------------
 
@@ -32,7 +32,7 @@ USE `movies_db`;
 CREATE TABLE `genres` (
   `id` int NOT NULL,
   `name` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `genres`
@@ -54,7 +54,7 @@ CREATE TABLE `movies` (
   `description` text,
   `release_date` date DEFAULT NULL,
   `rating` decimal(3,2) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `movies`
@@ -73,7 +73,7 @@ INSERT INTO `movies` (`id`, `title`, `description`, `release_date`, `rating`) VA
 CREATE TABLE `movie_genres` (
   `movie_id` int NOT NULL,
   `genre_id` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `movie_genres`
@@ -94,7 +94,7 @@ CREATE TABLE `reviews` (
   `user_id` int DEFAULT NULL,
   `movie_id` int DEFAULT NULL,
   `review` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `reviews`
@@ -115,7 +115,7 @@ CREATE TABLE `users` (
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
