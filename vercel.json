@@ -9,23 +9,23 @@
   "routes": [
     {
       "src": "/api/movies/(.*)",
-      "dest": "/index.js"
+      "dest": "/routes/moviesRoutes.js"
     },
     {
       "src": "/api/users/(.*)",
-      "dest": "/index.js"
+      "dest": "/routes/usersRoutes.js"
     },
     {
       "src": "/api/reviews/(.*)",
-      "dest": "/index.js"
+      "dest": "/routes/reviewsRoutes.js"
     },
     {
       "src": "/api/genres/(.*)",
-      "dest": "/index.js"
+      "dest": "/routes/genresRoutes.js"
     },
     {
       "src": "/api/movie_genres/(.*)",
-      "dest": "/index.js"
+      "dest": "/routes/movieGenresRoutes.js"
     },
     {
       "src": "/(.*)",
