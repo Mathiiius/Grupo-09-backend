@@ -1,7 +1,7 @@
 const express = require('express');
-const mysql = require('mysql2');
 const app = express();
 const port = 3000;
+
 const moviesRoutes = require('./routes/moviesRoutes');
 const usersRoutes = require('./routes/usersRoutes');
 const reviewsRoutes = require('./routes/reviewsRoutes');
