@@ -1,15 +1,35 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "./index.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/"
-      }
-    ]
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/movies/(.*)",
+      "dest": "/routes/moviesRoutes.js"
+    },
+    {
+      "src": "/api/users/(.*)",
+      "dest": "/routes/usersRoutes.js"
+    },
+    {
+      "src": "/api/reviews/(.*)",
+      "dest": "/routes/reviewsRoutes.js"
+    },
+    {
+      "src": "/api/genres/(.*)",
+      "dest": "/routes/genresRoutes.js"
+    },
+    {
+      "src": "/api/movie_genres/(.*)",
+      "dest": "/routes/movieGenresRoutes.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
+  ]
+}
